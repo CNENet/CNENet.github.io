@@ -21,6 +21,10 @@
             color: #003366;
             text-decoration: none;
         }
+        a:focus {
+    outline: 2px solid #0055a5;
+    outline-offset: 2px;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -153,6 +157,10 @@ p {
 .social-icons img:hover {
     transform: scale(1.2); /* grows slightly on hover */
 }
+        .social-icons img {
+    transition: transform 0.2s ease;
+}
+
         
     </style>
 </head>
