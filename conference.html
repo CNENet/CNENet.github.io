@@ -874,6 +874,16 @@ We invite you to join us, share your experiences, and be inspired by the latest 
 </div>
 
 <script>
+function toggleWorkshop(element) {
+    const content = element.nextElementSibling;
+    content.classList.toggle("open");
+    if(content.classList.contains("open")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+        content.style.maxHeight = "0";
+    }
+}
+
 function toggleMobileMenu() {
     const menu = document.getElementById("mobileMenu");
     if(menu.style.display === "flex") {
@@ -884,6 +894,7 @@ function toggleMobileMenu() {
     }
 }
 </script>
+
 
 
     <footer>
