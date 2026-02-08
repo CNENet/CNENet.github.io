@@ -297,17 +297,6 @@ We invite you to join us, share your experiences, and be inspired by the latest 
     </p>
 </div>
 
-<script>
-    function toggleWorkshop(element) {
-        const content = element.nextElementSibling;
-        content.classList.toggle("open");
-        if(content.classList.contains("open")) {
-            content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-            content.style.maxHeight = "0";
-        }
-    }
-
     <!-- Exhibitors Section -->
 <div class="conference-section">
     <h2>Exhibitors</h2>
@@ -317,7 +306,7 @@ We invite you to join us, share your experiences, and be inspired by the latest 
     </p>
 
     <div class="exhibitor-logos" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
-        <a href="https://frontline-communication.com/" target="_blank" aria-label="Frontline Communication Website">
+        <a href="https://exhibitor1.com" target="_blank" aria-label="Exhibitor 1 Website">
             <img src="images/exhibitor1logo.png" alt="Exhibitor 1 Logo" style="max-width:120px; height:auto; border-radius:5px;">
         </a>
         <a href="https://exhibitor2.com" target="_blank" aria-label="Exhibitor 2 Website">
@@ -334,6 +323,20 @@ We invite you to join us, share your experiences, and be inspired by the latest 
         </a>
     </div>
 </div>
+
+
+<script>
+    function toggleWorkshop(element) {
+        const content = element.nextElementSibling;
+        content.classList.toggle("open");
+        if(content.classList.contains("open")) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            content.style.maxHeight = "0";
+        }
+    }
+
+    </div>
 
 </script>
 
