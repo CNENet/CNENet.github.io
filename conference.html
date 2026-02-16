@@ -212,31 +212,51 @@
 .workshop-content.open {
     padding: 15px 20px;
 }
-
+/* Facilitator info container */
 .facilitator-info {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-bottom: 1px solid #e0e6ed;
     padding-bottom: 10px;
+    overflow: hidden; /* contains floated elements */
 }
 
-.facilitator-info img {
-    max-width: 100px;
-    height: auto;
-    border-radius: 5px;
+/* Facilitator photo floated left */
+.facilitator-photo {
+    float: left;
+    width: 150px; /* adjust as needed */
     margin-right: 15px;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
+/* Text that wraps around the photo */
+.facilitator-text {
+    overflow: hidden; /* ensures text wraps nicely around float */
+}
+
+/* Company logo inside facilitator info */
 .facilitator-info .company-logo {
     max-width: 80px;
     margin-left: auto;
 }
 
-
-.social-icons {
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+    .facilitator-photo {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .facilitator-text {
+        overflow: visible;
+    }
+    .company-logo {
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+    .social-icons {
     margin-top: 25px;
 }
 
@@ -259,52 +279,6 @@
 
 .social-icons img:hover {
     transform: scale(1.2); /* grows slightly on hover */
-}
-    
-@media (max-width: 600px) {
-    .facilitator-info {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .facilitator-info img,
-    .facilitator-info .company-logo {
-        margin-right: 0;
-        margin-left: 0;
-    }
-}
-
-/* Facilitator image float */
-.facilitator-info {
-    overflow: hidden; /* contains floated content */
-    margin-bottom: 15px;
-}
-
-.facilitator-photo {
-    float: left;
-    width: 150px; /* adjust as needed */
-    margin-right: 15px;
-    border-radius: 5px;
-}
-
-.facilitator-text {
-    overflow: hidden; /* ensures text wraps nicely around float */
-}
-
-/* Make responsive on small screens */
-@media (max-width: 600px) {
-    .facilitator-photo {
-        float: none;
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    .facilitator-text {
-        overflow: visible;
-    }
-    .company-logo {
-        display: inline-block;
-        margin-top: 10px;
-    }
 }
 
 </style>
