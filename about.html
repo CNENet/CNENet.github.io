@@ -243,23 +243,21 @@ h1, h2, h3 {
     /* Initial hidden & slightly dropped */
     opacity: 0;
     transform: translateY(20px);
-    
-    /* Smooth transition for opacity, position, scale */
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.2s ease;
+
+    /* Smooth transition for opacity, position, and scale */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* When JS triggers animation */
+/* Staggered pop-in animation triggered by JS */
 .social-icons img.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Hover effect: pop up slightly and add shadow */
+/* Hover effect: only grow, no shadow */
 .social-icons img:hover {
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.2); /* grow 20% on hover */
 }
-
    
 /* Footer */
 footer {
