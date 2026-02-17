@@ -73,30 +73,6 @@ h1, h2, h3 {
     align-items: center;
 }
 
-/* Navbar Logo */
-.nav-logo img {
-    height: 70px;
-    cursor: pointer;
-
-    /* Initial state for entrance animation */
-    opacity: 0;
-    transform: translateY(-20px);
-
-    /* Smooth transitions for opacity, position, and scale */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Logo becomes visible after JS triggers */
-.nav-logo img.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Hover effect: only grow, no shadow */
-.nav-logo img:hover {
-    transform: scale(1.1); /* grow 10% on hover */
-}
-
 .nav-links {
     list-style: none;
     display: flex;
@@ -233,42 +209,57 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
-/* =========================
-   Social Icons 
-   ========================= */
-.social-icons {
-    margin-top: 25px;
-    text-align: center;
+/* ========================
+   CNENet Interactive UI
+======================== */
+
+/* Navbar Logo Animation */
+.nav-logo img {
+    height: 70px;
+    cursor: pointer;
+
+    /* Initial state for entrance animation */
+    opacity: 0;
+    transform: translateY(-20px);
+
+    /* Smooth transitions for opacity, position, and scale */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.social-icons a {
-    display: inline-block;
-    margin: 0 10px;
+/* Logo becomes visible on load */
+.nav-logo img.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
+/* Hover: grow only */
+.nav-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Social Media Icons */
 .social-icons img {
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    cursor: pointer;
 
-    /* Initial hidden & slightly dropped */
+    /* Initial state for entrance animation */
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
 
-    /* Smooth transition for opacity, position, and scale */
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Smooth transitions for hover and entrance */
+    transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-/* Staggered pop-in animation triggered by JS */
+/* Icons become visible */
 .social-icons img.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Hover effect: only grow, no shadow */
+/* Hover: grow only */
 .social-icons img:hover {
-    transform: scale(1.2); /* grow 20% on hover */
+    transform: scale(1.2);
 }
    
 /* Footer */
@@ -284,10 +275,6 @@ footer {
     animation: fadeInUp 0.6s forwards;
 }
 
-@keyframes fadeInUp {
-    from { transform: translateY(10px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
 </style>
 </head>
 <body>
@@ -346,7 +333,7 @@ footer {
 <!-- ========================
    Social Icons
 ========================= -->
-<div class="social-icons" id="socialIcons">
+<div class="social-icons">
     <a href="https://www.facebook.com/groups/CNENet/" target="_blank" aria-label="Facebook">
         <img src="images/Facebook.png" alt="CNENet Facebook Group">
     </a>
