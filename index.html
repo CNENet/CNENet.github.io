@@ -49,6 +49,10 @@ ul li {
     margin-bottom: 10px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+   
 /* Buttons */
 .button-link {
     display: inline-block;
@@ -226,6 +230,18 @@ ul li {
     transform: scale(1.2);
 }
 
+/* Social icon animation */
+@keyframes highlightIcons {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.15); }
+    60% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.social-icons.animate img {
+    animation: highlightIcons 0.6s ease-in-out;
+}
+   
 /* ========================
    Footer
    ======================== */
@@ -272,7 +288,7 @@ footer {
         <p class="highlight"><strong>Clinical Nurse Educator Network (CNENet) is the UK professional network for nurses and nursing associates who work as clinical educators.</strong></p>
 
         <p>
-        We create collaborative spaces where clinical educators can <strong>connect</strong> and find <strong>support</strong>. These include our social media communities.
+        We create collaborative spaces where clinical educators can <strong>connect</strong> and find <strong>support</strong>. These include our <a href="#social">social media communities</a>.
         </p>
 
         <p>
@@ -324,7 +340,7 @@ footer {
 </div>
 
 <!-- Social Icons -->
-<div class="social-icons">
+<div class="social-icons" id="social">
     <a href="https://www.facebook.com/groups/CNENet/" target="_blank" aria-label="Join our Facebook Group">
         <img src="images/Facebook.png" alt="CNENet Facebook Group">
     </a>
