@@ -7,7 +7,9 @@
 <title>Clinical Nurse Educator Network UK</title>
 
 <style>
-/* Base Styles */
+/* ========================
+   Base Styles
+   ======================== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,7 +18,7 @@ body {
     color: #333;
 }
 
-/* Full-width container for text with max-width */
+/* Container to constrain text inside full-width sections */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -27,6 +29,24 @@ body {
 h1, h2 {
     color: #003366;
     margin-top: 20px;
+}
+
+/* Paragraphs */
+p {
+    margin: 15px 0;
+}
+
+/* Lists */
+ul {
+    text-align: left;
+    display: inline-block;
+    margin: 15px 0 25px 0;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+ul li {
+    margin-bottom: 10px;
 }
 
 /* Buttons */
@@ -46,7 +66,9 @@ h1, h2 {
     background-color: #0055a5;
 }
 
-/* Navbar Styles (matching conference page) */
+/* ========================
+   Navbar (matches conference page)
+   ======================== */
 .navbar {
     background-color: #ffffff;
     padding: 6px 20px;
@@ -62,10 +84,12 @@ h1, h2 {
     align-items: center;
 }
 
+/* Logo */
 .nav-logo img {
     height: 70px;
 }
 
+/* Desktop nav links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -92,7 +116,7 @@ h1, h2 {
     background-color: #e6edf5;
 }
 
-/* Hamburger for mobile */
+/* Hamburger (mobile) */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -108,7 +132,7 @@ h1, h2 {
     display: block;
 }
 
-/* Mobile menu dropdown */
+/* Mobile dropdown menu */
 .mobile-menu {
     display: none;
     list-style: none;
@@ -143,64 +167,38 @@ h1, h2 {
     }
 }
 
-/* Section styles */
+/* ========================
+   Full-width Sections
+   ======================== */
 .about-section, .committee-section {
-    background-color: #f0f4f8; /* full-width background */
-    padding: 40px 0; /* space above and below */
-}
-
-.about-section .container, .committee-section .container {
-    text-align: left;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    padding: 20px 25px;
-    margin: 0 auto;
-    max-width: 750px;
-}
-
-/* About Section with gradient */
-.about-section {
-    background: linear-gradient(120deg, #f0f4f8 0%, #dbe6f2 100%);
-    padding: 60px 0; /* more vertical space for visual separation */
-}
-
-/* Committee Section with gradient */
-.committee-section {
-    background: linear-gradient(120deg, #e6edf5 0%, #f9fbfd 100%);
+    width: 100%;
     padding: 60px 0;
 }
 
-/* Keep container styling the same so text stays readable */
+/* Gradient backgrounds */
+.about-section {
+    background: linear-gradient(120deg, #f0f4f8 0%, #dbe6f2 100%);
+}
+
+.committee-section {
+    background: linear-gradient(120deg, #e6edf5 0%, #f9fbfd 100%);
+}
+
+/* Inner container (text remains readable) */
 .about-section .container,
 .committee-section .container {
-    text-align: left;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    padding: 25px 30px;
-    margin: 0 auto;
     max-width: 750px;
-    background-color: #ffffff; /* keeps text on white for readability */
-}
-    
-/* Text Styling */
-p {
-    margin: 15px 0;
-}
-
-/* List Styling */
-ul {
+    margin: 0 auto;
+    padding: 25px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     text-align: left;
-    display: inline-block;
-    margin: 15px 0 25px 0;
-    padding-left: 20px;
-    line-height: 1.6;
 }
 
-ul li {
-    margin-bottom: 10px;
-}
-
-/* Social icons */
+/* ========================
+   Social Icons
+   ======================== */
 .social-icons {
     margin-top: 25px;
     text-align: center;
@@ -222,7 +220,9 @@ ul li {
     transform: scale(1.2);
 }
 
-/* Footer */
+/* ========================
+   Footer
+   ======================== */
 footer {
     text-align: center;
     padding: 20px;
@@ -230,6 +230,7 @@ footer {
     color: #666;
 }
 </style>
+    
 </head>
 
 <body>
