@@ -1,345 +1,329 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta name="description" content="Clinical Nurse Educator Network UK (CNENet) is a professional network supporting clinical nurse educators and nursing associates across the UK.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinical Nurse Educator Network UK</title>
+
+<style>
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Full-width container for text with max-width */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #003366;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.button-link {
+    display: inline-block;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: background-color 0.2s;
+}
+
+.button-link:hover {
+    background-color: #0055a5;
+}
+
+/* Navbar Styles (matching conference page) */
+.navbar {
+    background-color: #ffffff;
+    padding: 6px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 70px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-links li a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.nav-links li a.button-link {
+    color: #ffffff !important;
+    background-color: #003366;
+}
+
+.nav-links li a:hover {
+    background-color: #e6edf5;
+}
+
+/* Hamburger for mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #003366;
+    border-radius: 2px;
+    display: block;
+}
+
+/* Mobile menu dropdown */
+.mobile-menu {
+    display: none;
+    list-style: none;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e6ed;
+    flex-direction: column;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.mobile-menu li a {
+    color: #003366;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+}
+
+.mobile-menu li a:hover {
+    background-color: #e6edf5;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .nav-logo img {
+        height: 50px;
+    }
+}
+
+/* Section styles */
+.about-section, .committee-section {
+    background-color: #f0f4f8; /* full-width background */
+    padding: 40px 0; /* space above and below */
+}
+
+.about-section .container, .committee-section .container {
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+/* Text Styling */
+p {
+    margin: 15px 0;
+}
+
+/* List Styling */
+ul {
+    text-align: left;
+    display: inline-block;
+    margin: 15px 0 25px 0;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Social icons */
+.social-icons {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+</style>
 </head>
+
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta name="description" content="Clinical Nurse Educator Network UK (CNENet) is a professional network supporting clinical nurse educators and nursing associates across the UK."&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;Clinical Nurse Educator Network UK&lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1">/* Base Styles */</p>
-<p class="p1">body {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #333;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Full-width container for text with max-width */</p>
-<p class="p1">.container {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 800px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px 15px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Headings */</p>
-<p class="p1">h1, h2 {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #003366;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Buttons */</p>
-<p class="p1">.button-link {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #003366;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 12px 25px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 15px 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition: background-color 0.2s;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.button-link:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #0055a5;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Navbar Styles (matching conference page) */</p>
-<p class="p1">.navbar {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 6px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>position: sticky;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>z-index: 100;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid #e0e6ed;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-container {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-logo img {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height: 70px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-links {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-links li a {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #003366;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 6px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition: background-color 0.2s;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-links li a.button-link {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #ffffff !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #003366;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.nav-links li a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #e6edf5;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Hamburger for mobile */</p>
-<p class="p1">.hamburger {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap: 4px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.hamburger span {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 25px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height: 3px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #003366;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Mobile menu dropdown */</p>
-<p class="p1">.mobile-menu {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid #e0e6ed;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.mobile-menu li a {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #003366;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.mobile-menu li a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #e6edf5;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Responsive Navbar */</p>
-<p class="p1">@media (max-width: 768px) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hamburger {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-logo img {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>height: 50px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Section styles */</p>
-<p class="p1">.about-section, .committee-section {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background-color: #f0f4f8; /* full-width background */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 40px 0; /* space above and below */</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.about-section .container, .committee-section .container {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: left;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 2px 6px rgba(0,0,0,0.1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px 25px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width: 750px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Text Styling */</p>
-<p class="p1">p {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 15px 0;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* List Styling */</p>
-<p class="p1">ul {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: left;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 15px 0 25px 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding-left: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">ul li {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 10px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Social icons */</p>
-<p class="p1">.social-icons {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 25px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.social-icons a {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 10px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.social-icons img {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition: transform 0.2s ease;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.social-icons img:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transform: scale(1.2);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* Footer */</p>
-<p class="p1">footer {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 0.9em;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #666;</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Navigation Bar --&gt;</p>
-<p class="p1">&lt;nav class="navbar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="index.html" class="nav-logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="images/cnenetlogo.jpg" alt="CNENet Logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="nav-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="committee.html"&gt;About&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="conference.html"&gt;Conference 2026&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="https://forms.office.com/pages/responsepage.aspx?id=slTDN7CF9UeyIge0jXdO45AksIrpdb5DtPM-hG_wgyZUNTQ3NkQ2NERPV0IxSk42WEw2Nk1RTjdGUi4u&amp;origin=lprLink&amp;route=shorturl" class="button-link"&gt;Join Us&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hamburger" onclick="toggleMobileMenu()"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;ul class="mobile-menu" id="mobileMenu"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="committee.html"&gt;About&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="conference.html"&gt;Conference 2026&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="https://forms.office.com/pages/responsepage.aspx?id=YOUR_JOIN_FORM_ID"&gt;Join Us&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1">&lt;/ul&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- About Section --&gt;</p>
-<p class="p1">&lt;div class="about-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Clinical Nurse Educator Network UK (CNENet) is the UK professional network for nurses and nursing associates who work as clinical educators.&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>We create collaborative spaces where clinical educators can &lt;strong&gt;connect&lt;/strong&gt; and find &lt;strong&gt;support&lt;/strong&gt;. These include our social media communities.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>We &lt;strong&gt;advocate&lt;/strong&gt; for recognition of the unique contribution clinical educators make to the quality of healthcare in the UK.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>We &lt;strong&gt;inspire&lt;/strong&gt; through opportunities for clinical educators to share their passion and learning in our regular newsletter and events.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Our next conference on 10 July 2026 will be hosted by &lt;a href="https://www.bsmhft.nhs.uk/"&gt;Birmingham and Solihull NHS Mental Health Trust&lt;/a&gt;. Further information and applications will be released soon!</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Join Section --&gt;</p>
-<p class="p1">&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Join the Clinical Nurse Educator Network UK&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;We welcome registered nurses or nursing associates who are:&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Working in a role that is predominantly focused on education and development of the Nursing or Nursing Associate workforce&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Based anywhere in the United Kingdom&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Working within any sector of health or social care (excluding higher education)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a class="button-link" href="https://forms.office.com/pages/responsepage.aspx?id=slTDN7CF9UeyIge0jXdO45AksIrpdb5DtPM-hG_wgyZUNTQ3NkQ2NERPV0IxSk42WEw2Nk1RTjdGUi4u&amp;origin=lprLink&amp;route=shorturl" target="_blank"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>Register your interest in CNENet UK</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;By signing up you will be subscribed to the CNENet quarterly newsletter and may also receive occasional notifications of special events.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;You may unsubscribe at any time using &lt;a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=w3PSJVGo-0yiOekEj5iWaaGt141i_ThBlcXqLQCfqlJUN1cxNkQxWTNNVjA3RUJaR0gwQVBTUlVLQy4u" target="_blank"&gt;this link&lt;/a&gt;.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Committee Section --&gt;</p>
-<p class="p1">&lt;div class="committee-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Meet the Committee&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>The CNENet Committee provides leadership, oversight, and strategic guidance for the network. It ensures CNENet’s activities support clinical nurse educators across the UK and facilitate professional development opportunities.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="text-align:center;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="button-link" href="committee.html"&gt;View Committee Members&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Social Icons --&gt;</p>
-<p class="p1">&lt;div class="social-icons"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="https://www.facebook.com/groups/CNENet/" target="_blank" aria-label="Join our Facebook Group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="images/Facebook.png" alt="CNENet Facebook Group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="https://www.linkedin.com/company/cnenetwork/" target="_blank" aria-label="Join our LinkedIn Group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="images/LinkedIn.png" alt="CNENet LinkedIn Group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="https://x.com/CNENetworkUK" target="_blank" aria-label="Follow us on X (formerly Twitter)"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="images/X.png" alt="CNENet X (formerly Twitter)"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;© 2026 by Clinical Nurse Educator Network UK licensed under<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;CC BY-NC-SA 4.0&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">function toggleMobileMenu() {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const menu = document.getElementById("mobileMenu");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>if(menu.style.display === "flex") {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>menu.style.display = "none";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>menu.style.display = "flex";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>menu.style.flexDirection = "column";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="images/cnenetlogo.jpg" alt="CNENet Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="committee.html">About</a></li>
+            <li><a href="conference.html">Conference 2026</a></li>
+            <li><a href="https://forms.office.com/pages/responsepage.aspx?id=slTDN7CF9UeyIge0jXdO45AksIrpdb5DtPM-hG_wgyZUNTQ3NkQ2NERPV0IxSk42WEw2Nk1RTjdGUi4u&origin=lprLink&route=shorturl" class="button-link">Join Us</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<ul class="mobile-menu" id="mobileMenu">
+    <li><a href="committee.html">About</a></li>
+    <li><a href="conference.html">Conference 2026</a></li>
+    <li><a href="https://forms.office.com/pages/responsepage.aspx?id=YOUR_JOIN_FORM_ID">Join Us</a></li>
+</ul>
+
+<!-- About Section -->
+<div class="about-section">
+    <div class="container">
+        <p><strong>Clinical Nurse Educator Network UK (CNENet) is the UK professional network for nurses and nursing associates who work as clinical educators.</strong></p>
+
+        <p>
+        We create collaborative spaces where clinical educators can <strong>connect</strong> and find <strong>support</strong>. These include our social media communities.
+        </p>
+
+        <p>
+        We <strong>advocate</strong> for recognition of the unique contribution clinical educators make to the quality of healthcare in the UK.
+        </p>
+
+        <p>
+        We <strong>inspire</strong> through opportunities for clinical educators to share their passion and learning in our regular newsletter and events.
+        </p>
+
+        <p>
+        Our next conference on 10 July 2026 will be hosted by <a href="https://www.bsmhft.nhs.uk/">Birmingham and Solihull NHS Mental Health Trust</a>. Further information and applications will be released soon!
+        </p>
+    </div>
+</div>
+
+<!-- Join Section -->
+<div class="container">
+    <h2>Join the Clinical Nurse Educator Network UK</h2>
+    <p>We welcome registered nurses or nursing associates who are:</p>
+    <ul>
+        <li>Working in a role that is predominantly focused on education and development of the Nursing or Nursing Associate workforce</li>
+        <li>Based anywhere in the United Kingdom</li>
+        <li>Working within any sector of health or social care (excluding higher education)</li>
+    </ul>
+
+    <p>
+    <a class="button-link" href="https://forms.office.com/pages/responsepage.aspx?id=slTDN7CF9UeyIge0jXdO45AksIrpdb5DtPM-hG_wgyZUNTQ3NkQ2NERPV0IxSk42WEw2Nk1RTjdGUi4u&origin=lprLink&route=shorturl" target="_blank">
+    Register your interest in CNENet UK
+    </a>
+    </p>
+
+    <p>By signing up you will be subscribed to the CNENet quarterly newsletter and may also receive occasional notifications of special events.</p>
+
+    <p>You may unsubscribe at any time using <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=w3PSJVGo-0yiOekEj5iWaaGt141i_ThBlcXqLQCfqlJUN1cxNkQxWTNNVjA3RUJaR0gwQVBTUlVLQy4u" target="_blank">this link</a>.</p>
+</div>
+
+<!-- Committee Section -->
+<div class="committee-section">
+    <div class="container">
+        <h2>Meet the Committee</h2>
+        <p>
+            The CNENet Committee provides leadership, oversight, and strategic guidance for the network. It ensures CNENet’s activities support clinical nurse educators across the UK and facilitate professional development opportunities.
+        </p>
+        <p style="text-align:center;">
+            <a class="button-link" href="committee.html">View Committee Members</a>
+        </p>
+    </div>
+</div>
+
+<!-- Social Icons -->
+<div class="social-icons">
+    <a href="https://www.facebook.com/groups/CNENet/" target="_blank" aria-label="Join our Facebook Group">
+        <img src="images/Facebook.png" alt="CNENet Facebook Group">
+    </a>
+    <a href="https://www.linkedin.com/company/cnenetwork/" target="_blank" aria-label="Join our LinkedIn Group">
+        <img src="images/LinkedIn.png" alt="CNENet LinkedIn Group">
+    </a>
+    <a href="https://x.com/CNENetworkUK" target="_blank" aria-label="Follow us on X (formerly Twitter)">
+        <img src="images/X.png" alt="CNENet X (formerly Twitter)">
+    </a>
+</div>
+
+<footer>
+    <p>© 2026 by Clinical Nurse Educator Network UK licensed under 
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+    </p>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById("mobileMenu");
+    if(menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+        menu.style.flexDirection = "column";
+    }
+}
+</script>
+
 </body>
 </html>
