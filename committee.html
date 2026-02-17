@@ -25,9 +25,9 @@ p {
 h1 {
     color: #003366; /* dark blue, same as buttons */
     margin-bottom: 20px;
-    text-align: center; /* optional, keeps title centered */
+    text-align: center;
 }
-   
+
 ul {
     text-align: left;
     display: inline-block;
@@ -163,22 +163,13 @@ ul li {
     padding: 20px 15px;
 }
 
-/* Full-width sections with gradient */
-.section {
-    width: 100%;
+/* Committee Section */
+.committee-section {
+    background: linear-gradient(120deg, #e6edf5 0%, #f9fbfd 100%);
     padding: 60px 0;
 }
 
-.about-section {
-    background: linear-gradient(120deg, #f0f4f8 0%, #dbe6f2 100%);
-}
-
-.committee-section {
-    background: linear-gradient(120deg, #e6edf5 0%, #f9fbfd 100%);
-}
-
-/* Inner container for readability */
-.section .container {
+.committee-section .container {
     max-width: 750px;
     margin: 0 auto;
     padding: 25px 30px;
@@ -213,6 +204,15 @@ ul li {
     padding: 15px 20px;
 }
 
+   .member-header.clickable {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.member-header.clickable:hover {
+    background-color: #e6edf5; /* subtle hover effect */
+}
+
 .member-photo {
     width: 80px;
     height: 80px;
@@ -222,13 +222,13 @@ ul li {
 
 .member-info h3 {
     margin: 0;
-    color: #003366;
+    color: #003366; /* name */
 }
 
 .member-info .role {
     margin: 2px 0 0 0;
     font-size: 0.95em;
-    color: #0055a5; /* lighter blue for role */
+    color: #0055a5; /* role text */
 }
 
 /* Collapsible toggle button */
@@ -364,47 +364,50 @@ footer {
 <!-- Committee Section -->
 <div class="committee-section section">
     <div class="container">
-        <h1>CNENet Committee Members</h1>
+        <h1>CNENet UK Committee Members</h1>
         <p>The CNENet Committee provides leadership and oversight for the network. Here are the members and their roles:</p>
 
-        <div class="committee-cards">
+       <!-- Committee Cards -->
+<div class="committee-cards">
 
-  <div class="member-card">
-    <div class="member-header">
-      <img src="images/LW1.jpg" alt="Luke White" class="member-photo">
-      <div class="member-info">
-        <h3>Luke White</h3>
-        <p class="role">Chair</p>
-      </div>
-      <button class="collapsible-toggle">+</button>
+    <!-- Luke White -->
+    <div class="member-card">
+        <div class="member-header clickable">
+            <img src="images/LW1.jpg" alt="Luke White" class="member-photo">
+            <div class="member-info">
+                <h3>Luke White</h3>
+                <p class="role">Chair</p>
+            </div>
+        </div>
+        <div class="member-bio">
+            <p>A compassionate, dedicated and experienced nurse, passionate about clinical education, coaching, nurturing and growing our future clinical workforce. Wants to inspire others to achieve more and to realise their goals. Motivated to provide patients with high quality care through education and leading education teams to provide support for our clinical staff. Experienced in the Clinical Educator role development, NMC OSCE preparation, project management, leading transformational changes and growing our workforce. Co-Chair of the LTHT Disabled Staff Network and the LTHT Deaf and Hard of Hearing Action Group - promoting and leading work on reducing inequalities for all.</p>
+        </div>
     </div>
-    <div class="member-bio">
-      <p>A compassionate, dedicated and experienced nurse, passionate about clinical education, coaching, nurturing and growing our future clinical workforce. Wants to inspire others to achieve more and to realise their goals. Motivated to provide patients with high quality care through education and leading education teams to provide support for our clinical staff. Experienced in the Clinical Educator role development, NMC OSCE preparation, project management, leading transformational changes and growing our workforce. Co-Chair of the LTHT Disabled Staff Network and the LTHT Deaf and Hard of Hearing Action Group - promoting and leading work on reducing inequalities for all.</p>
-    </div>
-  </div>
 
-  <div class="member-card">
-    <div class="member-header">
-      <img src="images/FT1.jpg" alt="Finn Tysoe" class="member-photo">
-      <div class="member-info">
-        <h3>Finn Tysoe</h3>
-        <p class="role">Deputy Chair</p>
-      </div>
-      <button class="collapsible-toggle">+</button>
+    <!-- Finn Tysoe -->
+    <div class="member-card">
+        <div class="member-header clickable">
+            <img src="images/FT1.jpg" alt="Finn Tysoe" class="member-photo">
+            <div class="member-info">
+                <h3>Finn Tysoe</h3>
+                <p class="role">Deputy Chair</p>
+            </div>
+        </div>
+        <div class="member-bio">
+            <p>Finn is an avowed generalist who embraces Robert Heinlein’s maxim that ‘specialisation is for insects’. They are naturally curious and willing to look past assumptions in order to be alongside people. Throughout their life they have supported people through times of crisis and uncertainty.</p>
+            <p>Currently Finn leads a team of clinical educators to deliver academic and practice-based learning. Finn firmly believes they are the best team. In 2023 the team's work received an NHS England award for pastoral care of Internationally Educated Nurses.</p>
+            <p>Finn’s key area of interest is supporting nurses and midwives in transition between levels of practice. They contribute to cancer policy, international education programmes and advanced communication skills training. They have taught and continue to learn from nurses in Palestine and Tanzania.</p>
+            <a href="https://www.linkedin.com/in/finn-tysoe" target="_blank">
+                <img src="LinkedIn.png" alt="Finn LinkedIn" class="member-linkedin">
+            </a>
+        </div>
     </div>
-    <div class="member-bio">
-      <p>Finn is an avowed generalist who embraces Robert Heinlein’s maxim that ‘specialisation is for insects’. They are naturally curious and willing to look past assumptions in order to be alongside people. Throughout their life they have supported people through times of crisis and uncertainty.</p>
-      <p>Currently Finn leads a team of clinical educators to deliver academic and practice-based learning. Finn firmly believes they are the best team. In 2023 the team's work received an NHS England award for pastoral care of Internationally Educated Nurses.</p>
-      <p>Finn’s key area of interest is supporting nurses and midwives in transition between levels of practice. They contribute to cancer policy, international education programmes and advanced communication skills training. They have taught and continue to learn from nurses in Palestine and Tanzania.</p>
-      <a href="https://www.linkedin.com/in/finn-tysoe" target="_blank">
-        <img src="LinkedIn.png" alt="Finn LinkedIn" class="member-linkedin">
-      </a>
-    </div>
-  </div>
 
 </div>
 
+        </div>
 
+        <!-- Steering Committee -->
         <div class="steering-committee">
             <h2>Steering Committee</h2>
             <ul>
@@ -446,6 +449,8 @@ footer {
 </footer>
 
 <script>
+
+   
 function toggleMobileMenu() {
     const menu = document.getElementById("mobileMenu");
     if(menu.style.display === "flex") {
@@ -456,15 +461,15 @@ function toggleMobileMenu() {
     }
 }
 
-document.querySelectorAll(".collapsible-toggle").forEach(button => {
-    button.addEventListener("click", () => {
-        const bio = button.closest(".member-card").querySelector(".member-bio");
+// Collapsible member bios using clickable header
+document.querySelectorAll(".member-header.clickable").forEach(header => {
+    header.addEventListener("click", () => {
+        const bio = header.closest(".member-card").querySelector(".member-bio");
         const isVisible = bio.style.display === "block";
         bio.style.display = isVisible ? "none" : "block";
-        button.classList.toggle("active", !isVisible);
     });
 });
-   
+
 </script>
 
 </body>
