@@ -234,30 +234,46 @@ h1, h2, h3 {
     margin: 0 10px;
 }
 
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    transition: transform 0.2s ease, opacity 0.4s ease;
-    opacity: 0;
+/* Social Icons - initial pop-in animation */
+@keyframes icon-pop-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-/* Social Icons - hover + fade-in */
+/* Hover bounce animation */
+@keyframes icon-bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-5px) scale(1.1);
+    }
+}
+
 .social-icons img {
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    opacity: 0;
+    animation: icon-pop-in 0.6s forwards;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .social-icons img:hover {
-    transform: translateY(0) scale(1.2);
+    animation: icon-bounce 0.6s infinite;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    opacity: 1;
 }
+
    
 /* Footer */
 footer {
@@ -364,30 +380,16 @@ function toggleMobileMenu() {
     menu.style.flexDirection = "column";
 }
 
-// Animate social icons on page load
-function animateSocialIcons() {
+// Animate social icons on page load with staggered pop-in
+window.addEventListener('load', () => {
     const icons = document.querySelectorAll('.social-icons img');
     icons.forEach((icon, i) => {
         setTimeout(() => {
-            icon.style.opacity = '1';
-            icon.style.transform = 'translateY(0)';
-        }, i * 150); // staggered animation
+            icon.classList.add('visible');
+        }, i * 150); // staggered delay for each icon
     });
-}
+});
 
-window.addEventListener('load', animateSocialIcons);
-   
-// Animate social icons on scroll
-function animateSocialIcons() {
-    const icons = document.querySelectorAll('.social-icons img');
-    icons.forEach((icon, i) => {
-        setTimeout(() => {
-            icon.classList.add('fade-in');
-        }, i * 150);
-    });
-}
-
-window.addEventListener('load', animateSocialIcons);
 </script>
 
 </body>
