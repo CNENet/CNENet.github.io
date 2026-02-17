@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;meta name="description" content="CNENet UK – Clinical Nurse Educator Network UK"&gt;</p>
+<p class="p1">&lt;title&gt;CNENet UK&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">/* ========================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>Base Styles</p>
+<p class="p1"><span class="Apple-converted-space">   </span>======================== */</p>
+<p class="p1">body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #333;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">p {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 15px 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">h1 {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #003366;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">ul {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 15px 0 25px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding-left: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">ul li {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Buttons */</p>
+<p class="p1">.button-link {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #003366;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 12px 25px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 15px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: background-color 0.2s;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.button-link:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #0055a5;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ========================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>Navbar</p>
+<p class="p1"><span class="Apple-converted-space">   </span>======================== */</p>
+<p class="p1">.navbar {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 6px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: sticky;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>z-index: 100;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid #e0e6ed;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.nav-container {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.nav-logo img {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 70px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.nav-links {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>list-style: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.nav-links li a {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #003366;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 6px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: background-color 0.2s;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.nav-links li a.button-link {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #ffffff !important;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #003366;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.nav-links li a:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #e6edf5;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Hamburger for mobile */</p>
+<p class="p1">.hamburger {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 4px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.hamburger span {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #003366;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.mobile-menu {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>list-style: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid #e0e6ed;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.mobile-menu li a {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #003366;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 20px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.mobile-menu li a:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #e6edf5;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-links {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hamburger {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-logo img {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ========================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>Page Container</p>
+<p class="p1"><span class="Apple-converted-space">   </span>======================== */</p>
+<p class="p1">.container {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 40px auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 0 15px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ========================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>Social Icons</p>
+<p class="p1"><span class="Apple-converted-space">   </span>======================== */</p>
+<p class="p1">.social-icons {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.social-icons a {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.social-icons img {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: transform 0.2s ease;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.social-icons img:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transform: scale(1.2);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ========================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>Footer</p>
+<p class="p1"><span class="Apple-converted-space">   </span>======================== */</p>
+<p class="p1">footer {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #666;</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- Navbar --&gt;</p>
+<p class="p1">&lt;nav class="navbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="index.html" class="nav-logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="images/cnenetlogo.jpg" alt="CNENet Logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;a href="index.html#join" class="button-link"&gt;Join Us&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hamburger" onclick="toggleMobileMenu()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;ul class="mobile-menu" id="mobileMenu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="index.html#join"&gt;Join Us&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1">&lt;/ul&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- Main Container --&gt;</p>
+<p class="p1">&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Page Title&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;This is a blank page with the same styling and navbar as other CNENet pages. You can add your content here.&lt;/p&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- Social Icons --&gt;</p>
+<p class="p1">&lt;div class="social-icons"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="https://www.facebook.com/groups/CNENet/" target="_blank" aria-label="Join our Facebook Group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="images/Facebook.png" alt="CNENet Facebook Group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="https://www.linkedin.com/company/cnenetwork/" target="_blank" aria-label="Join our LinkedIn Group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="images/LinkedIn.png" alt="CNENet LinkedIn Group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="https://x.com/CNENetworkUK" target="_blank" aria-label="Follow us on X (formerly Twitter)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="images/X.png" alt="CNENet X (formerly Twitter)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;© 2026 by Clinical Nurse Educator Network UK licensed under<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;CC BY-NC-SA 4.0&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">function toggleMobileMenu() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const menu = document.getElementById("mobileMenu");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(menu.style.display === "flex") {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>menu.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>menu.style.display = "flex";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>menu.style.flexDirection = "column";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
