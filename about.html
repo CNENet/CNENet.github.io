@@ -414,6 +414,31 @@ window.addEventListener('load', () => {
     });
 });
 
+   // Animate social icons when arriving via anchor link
+function animateSocialIcons() {
+    const socialSection = document.getElementById("social");
+    socialSection.classList.add("animate");
+
+    // Remove class after animation so it can replay
+    setTimeout(() => {
+        socialSection.classList.remove("animate");
+    }, 700);
+}
+
+// Trigger animation when page loads with #social in URL
+window.addEventListener("load", () => {
+    if (window.location.hash === "#social") {
+        animateSocialIcons();
+    }
+});
+
+// Trigger animation when clicking internal link
+document.querySelectorAll('a[href="#social"]').forEach(link => {
+    link.addEventListener("click", () => {
+        setTimeout(animateSocialIcons, 500);
+    });
+});
+
    
 </script>
 
