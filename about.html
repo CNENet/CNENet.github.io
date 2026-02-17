@@ -73,16 +73,28 @@ h1, h2, h3 {
     align-items: center;
 }
 
-/* Navbar Logo Animation */
+/* Navbar Logo */
 .nav-logo img {
     height: 70px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+
+    /* Initial state for entrance animation */
+    opacity: 0;
+    transform: translateY(-20px);
+
+    /* Smooth transitions for opacity, position, and scale */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Logo becomes visible after JS triggers */
+.nav-logo img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect: only grow, no shadow */
 .nav-logo img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: scale(1.1); /* grow 10% on hover */
 }
 
 .nav-links {
@@ -364,16 +376,25 @@ function toggleMobileMenu() {
     menu.style.flexDirection = "column";
 }
 
-// Animate social icons on page load with staggered pop-in
 window.addEventListener('load', () => {
+    // Animate navbar logo
+    const logo = document.querySelector('.nav-logo img');
+    if (logo) {
+        setTimeout(() => {
+            logo.classList.add('visible');
+        }, 100); // small delay for subtle entrance
+    }
+
+    // Animate social icons
     const icons = document.querySelectorAll('.social-icons img');
     icons.forEach((icon, i) => {
         setTimeout(() => {
             icon.classList.add('visible');
-        }, i * 150); // staggered delay for each icon
+        }, 300 + i * 150); // stagger after logo animation
     });
 });
 
+   
 </script>
 
 </body>
