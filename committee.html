@@ -40,6 +40,11 @@ ul li {
     margin-bottom: 10px;
 }
 
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+   
 /* Buttons */
 .button-link {
     display: inline-block;
@@ -322,6 +327,18 @@ ul li {
     transform: scale(1.2);
 }
 
+/* Social icon animation */
+@keyframes highlightIcons {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.15); }
+    60% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.social-icons.animate img {
+    animation: highlightIcons 0.6s ease-in-out;
+}
+   
 /* ========================
    Footer
    ======================== */
@@ -523,7 +540,7 @@ footer {
 </div>
 
 <!-- Social Icons -->
-<div class="social-icons">
+<div class="social-icons" id="social">
     <a href="https://www.facebook.com/groups/CNENet/" target="_blank" aria-label="Join our Facebook Group">
         <img src="images/Facebook.png" alt="CNENet Facebook Group">
     </a>
@@ -563,6 +580,31 @@ document.querySelectorAll(".member-header.clickable").forEach(header => {
     });
 });
 
+// Animate social icons when arriving via anchor link
+function animateSocialIcons() {
+    const socialSection = document.getElementById("social");
+    socialSection.classList.add("animate");
+
+    // Remove class after animation so it can replay
+    setTimeout(() => {
+        socialSection.classList.remove("animate");
+    }, 700);
+}
+
+// Trigger animation when page loads with #social in URL
+window.addEventListener("load", () => {
+    if (window.location.hash === "#social") {
+        animateSocialIcons();
+    }
+});
+
+// Trigger animation when clicking internal link
+document.querySelectorAll('a[href="#social"]').forEach(link => {
+    link.addEventListener("click", () => {
+        setTimeout(animateSocialIcons, 500);
+    });
+});
+   
 </script>
 
 </body>
