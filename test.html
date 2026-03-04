@@ -220,6 +220,21 @@ section {
   max-height: 1000px;
   padding: 15px 20px;
 }
+
+   /* Hidden Bio */
+.speaker-bio {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 20px;
+  background-color: #f9fbfd;
+  border-top: 1px solid #cdd9e5;
+}
+
+.speaker-bio.open {
+  max-height: 1000px;
+  padding: 15px 20px;
+}
    
 /* Workshops */
 .workshop {
