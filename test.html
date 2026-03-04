@@ -334,11 +334,18 @@ We invite you to join us, share your experiences, and be inspired by the latest 
     <div class="section-container">
         <h2>Keynote Speaker</h2>
         <div class="facilitator-info">
-            <img src="images/keynote.jpg" alt="Dr. Jane Smith" class="facilitator-photo" onclick="toggleBio(this)">
+            <!-- Keynote photo -->
+            <img src="images/keynote.jpg" alt="Nicola Ranger" class="facilitator-photo" onclick="toggleBio(this)">
+            
+            <!-- Speaker name and bio -->
             <div class="facilitator-text">
-                <strong>Dr. Jane Smith</strong>, Professor of Clinical Education
+                <strong>Nicola Ranger</strong>, Professor of Clinical Education
+                <!-- Collapsible bio -->
                 <div class="workshop-content" style="max-height:0; overflow:hidden; transition:max-height 0.5s ease; padding:0;">
-                    <p>Dr. Jane Smith has over 30 years of experience in clinical education, leading research on innovative teaching methods in healthcare. Her work focuses on integrating technology and active learning to enhance student outcomes.</p>
+                    <p>
+                        Dr. Jane Smith has over 30 years of experience in clinical education, leading research on innovative teaching methods in healthcare. 
+                        Her work focuses on integrating technology and active learning to enhance student outcomes.
+                    </p>
                 </div>
             </div>
         </div>
@@ -594,6 +601,20 @@ function toggleMobileMenu() {
         menu.style.flexDirection = "column";
     }
 }
+
+   function toggleBio(imgElement) {
+    const bio = imgElement.nextElementSibling.querySelector(".workshop-content");
+    bio.classList.toggle("open");
+
+    if(bio.classList.contains("open")) {
+        bio.style.maxHeight = bio.scrollHeight + "px";
+        bio.style.padding = "15px 0";
+    } else {
+        bio.style.maxHeight = "0";
+        bio.style.padding = "0";
+    }
+}
+   
 </script>
 
 
