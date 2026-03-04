@@ -710,6 +710,20 @@ function toggleSpeakerBio(cardElement) {
   const bio = cardElement.querySelector('.speaker-bio');
   bio.classList.toggle('open');
 }
+
+function toggleSpeakerBio(card) {
+    const bio = card.querySelector('.speaker-bio');
+    bio.classList.toggle('open');
+
+    if (bio.classList.contains('open')) {
+        // reset first to allow recalculation
+        bio.style.maxHeight = "0px"; 
+        const scrollHeight = bio.scrollHeight;
+        bio.style.maxHeight = scrollHeight + "px";
+    } else {
+        bio.style.maxHeight = "0px";
+    }
+}
    
 function toggleMobileMenu() {
     const menu = document.getElementById("mobileMenu");
