@@ -7,7 +7,7 @@
 <title>CNENet 2026 Conference</title>
 
 <style>
-/* =======================
+/* ======================
    Base Styles
 ======================== */
 body {
@@ -203,7 +203,8 @@ section {
 .speaker-summary {
   display: flex;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 20px
+   cursor: pointer;
 }
 
 /* Hidden Bio */
@@ -217,23 +218,32 @@ section {
 }
 
 .speaker-bio.open {
-  max-height: 1000px;
-  padding: 15px 20px;
+  padding: 15px 20px 25px;
 }
 
-   /* Hidden Bio */
-.speaker-bio {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.3s ease;
-  padding: 0 20px;
-  background-color: #f9fbfd;
-  border-top: 1px solid #cdd9e5;
-}
+/* Responsive */
+@media (max-width: 600px) {
+    .speaker-summary {
+        flex-direction: column;
+        align-items: center;  /* center items */
+        text-align: center;   /* center text inside */
+        padding: 15px 10px;   /* add horizontal padding */
+    }
 
-.speaker-bio.open {
-  max-height: 1000px;
-  padding: 15px 20px;
+    .facilitator-photo {
+        width: 100%;
+        max-width: 180px;
+        margin-bottom: 10px;
+       border-radius: 5px;
+    }
+
+    .speaker-bio {
+        padding: 10px 15px;
+    }
+   .facilitator-text {
+        margin-top: 10px;    /* space between image and name/title */
+    padding: 0 5px; /* small padding inside the box on mobile */
+}
 }
    
 /* Workshops */
@@ -429,13 +439,6 @@ We invite you to join us, share your experiences, and be inspired by the latest 
         <div class="facilitator-text">
           <strong>Professor Nicola Ranger</strong><br>
           RCN General Secretary and Chief Executive
-           <div class="company-logo-container">
-          <a href="https://www.rcn.org.uk/" target="_blank">
-            <img src="images/RCNmini.jpg" alt="Royal College of Nursing Logo" class="company-logo">
-          </a>
-        </div>
-      </div>
-    </div>
         </div>
       </div>
 
@@ -448,7 +451,11 @@ We invite you to join us, share your experiences, and be inspired by the latest 
         <p>
           She has also held a number of senior nursing roles at University College London Hospitals NHS Foundation Trust and Surrey and Sussex Healthcare NHS Trust. Earlier in her career, she worked at America’s George Washington University Hospital in Washington and at Mount Sinai Medical Centre in New York.
         </p>
-        
+         <div class="company-logo-container">
+          <a href="https://www.rcn.org.uk/" target="_blank">
+            <img src="images/RCNmini.jpg" alt="Royal College of Nursing Logo" class="company-logo">
+          </a>
+        </div>
       </div>
     </div>
 
@@ -706,9 +713,18 @@ function toggleWorkshop(element) {
     }
 }
 
-function toggleSpeakerBio(cardElement) {
-  const bio = cardElement.querySelector('.speaker-bio');
-  bio.classList.toggle('open');
+function toggleSpeakerBio(card) {
+    const bio = card.querySelector('.speaker-bio');
+    bio.classList.toggle('open');
+
+    if (bio.classList.contains('open')) {
+        // reset first to allow recalculation
+        bio.style.maxHeight = "0px"; 
+        const scrollHeight = bio.scrollHeight;
+        bio.style.maxHeight = scrollHeight + "px";
+    } else {
+        bio.style.maxHeight = "0px";
+    }
 }
    
 function toggleMobileMenu() {
@@ -721,18 +737,6 @@ function toggleMobileMenu() {
     }
 }
 
-   function toggleBio(imgElement) {
-    const bio = imgElement.nextElementSibling.querySelector(".workshop-content");
-    bio.classList.toggle("open");
-
-    if(bio.classList.contains("open")) {
-        bio.style.maxHeight = bio.scrollHeight + "px";
-        bio.style.padding = "15px 0";
-    } else {
-        bio.style.maxHeight = "0";
-        bio.style.padding = "0";
-    }
-}
    
 </script>
 
