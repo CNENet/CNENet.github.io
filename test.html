@@ -186,8 +186,9 @@ section {
    
 /* Workshops */
 .workshop {
-    display: flow-root; /* clears floated children automatically */
-    border-radius: 10px;
+    display: flow-root;
+    border-radius: 10px;       /* all corners rounded */
+    overflow: hidden;          /* ensures child content doesn't break corners */
     margin-bottom: 30px;
     background: #ffffff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -221,8 +222,6 @@ section {
     transition: max-height 0.5s ease, padding 0.3s ease;
     padding: 0 20px;
     background-color: #f9fbfd;
-    border-bottom-left-radius: 10px;   /* Match card corners */
-    border-bottom-right-radius: 10px;
 }
 
 .workshop-content.open {
