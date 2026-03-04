@@ -165,6 +165,25 @@ section {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+.cnenet-section-light {
+    background: linear-gradient(120deg, #f9fbfd 0%, #e6edf5 100%);
+    padding: 60px 0;
+}
+
+.cnenet-section-dark {
+    background: linear-gradient(120deg, #f0f4f8 0%, #dbe6f2 100%);
+    padding: 60px 0;
+}
+
+.cnenet-section .container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+   
 /* Workshops */
 .workshop {
     border-radius: 10px;
@@ -329,26 +348,40 @@ We invite you to join us, share your experiences, and be inspired by the latest 
 </div>
 </section>
 
-<!-- Keynote Speaker -->
-<section>
-    <div class="section-container">
+<!-- Keynote Speaker Section -->
+<section class="cnenet-section cnenet-section-dark">
+    <div class="container">
         <h2>Keynote Speaker</h2>
-        <div class="facilitator-info">
-            <!-- Keynote photo -->
-            <img src="images/keynote.jpg" alt="Nicola Ranger" class="facilitator-photo" onclick="toggleBio(this)">
-            
-            <!-- Speaker name and bio -->
-            <div class="facilitator-text">
-                <strong>Nicola Ranger</strong>, Professor of Clinical Education
-                <!-- Collapsible bio -->
-                <div class="workshop-content" style="max-height:0; overflow:hidden; transition:max-height 0.5s ease; padding:0;">
-                    <p>
-                        Dr. Jane Smith has over 30 years of experience in clinical education, leading research on innovative teaching methods in healthcare. 
-                        Her work focuses on integrating technology and active learning to enhance student outcomes.
-                    </p>
+
+        <!-- Speaker Card -->
+        <div class="workshop">
+            <!-- Clickable header with name & title -->
+            <div class="workshop-title" onclick="toggleWorkshop(this)">
+                Dr. Jane Smith – Innovating Clinical Education
+            </div>
+
+            <!-- Hidden bio content -->
+            <div class="workshop-content">
+                <div class="facilitator-info">
+                    <!-- Speaker photo -->
+                    <img src="images/keynote-jane-smith.jpg" 
+                         alt="Dr. Jane Smith Photo" 
+                         class="facilitator-photo">
+
+                    <div class="facilitator-text">
+                        <strong>Dr. Jane Smith</strong><br>
+                        Chief Clinical Education Officer, FutureHealth UK
+                        <p>
+                            Dr. Smith has over 20 years’ experience leading clinical education initiatives across multiple healthcare systems. Her work focuses on integrating innovative learning strategies, including digital and simulation-based approaches, to improve clinical outcomes and professional development.
+                        </p>
+                        <p>
+                            She has led numerous national programs in education innovation, mentoring, and leadership development for clinical educators.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -581,7 +614,7 @@ We invite you to join us, share your experiences, and be inspired by the latest 
    
 </div>
     
-<script>
+<script>   
 function toggleWorkshop(element) {
     const content = element.nextElementSibling;
     content.classList.toggle("open");
