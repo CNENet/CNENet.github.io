@@ -183,25 +183,17 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-
-<!-- Speaker Photo and Bio -->
-        <div class="facilitator-info" style="margin-top: 30px;">
-            <img src="images/keynote-nicola-ranger.jpg" 
-                 alt="Professor Nicola Ranger Photo" 
-                 class="facilitator-photo">
    
 /* Workshops */
 .workshop {
-    display: block;        /* Ensure each workshop is a block */
-    clear: both;           /* Clears floated elements inside */
-    border-radius: 10px;   /* Rounded corners */
-    margin-bottom: 30px;   /* Space between workshops */
-    overflow: hidden;
+    display: flow-root; /* clears floated children automatically */
+    border-radius: 10px;
+    margin-bottom: 30px;
     background: #ffffff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
-
+   
 .workshop:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
