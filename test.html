@@ -689,6 +689,11 @@ function toggleWorkshop(element) {
     }
 }
 
+function toggleSpeakerBio(cardElement) {
+  const bio = cardElement.querySelector('.speaker-bio');
+  bio.classList.toggle('open');
+}
+   
 function toggleMobileMenu() {
     const menu = document.getElementById("mobileMenu");
     if(menu.style.display === "flex") {
