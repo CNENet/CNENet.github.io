@@ -225,18 +225,25 @@ section {
 @media (max-width: 600px) {
     .speaker-summary {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;  /* center items */
+        text-align: center;   /* center text inside */
+        padding: 15px 10px;   /* add horizontal padding */
     }
 
     .facilitator-photo {
         width: 100%;
-        max-width: 200px;
+        max-width: 180px;
         margin-bottom: 10px;
+       border-radius: 5px;
     }
 
     .speaker-bio {
         padding: 10px 15px;
     }
+   .facilitator-text {
+        margin-top: 10px;    /* space between image and name/title */
+    padding: 0 5px; /* small padding inside the box on mobile */
+}
 }
    
 /* Workshops */
