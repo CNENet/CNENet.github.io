@@ -140,16 +140,19 @@ h1, h2 {
 /* ========================
    Embed Form Container
 ======================== */
+
 .form-embed-wrapper {
-    position: relative;
     width: 100%;
-    min-height: 500px;
+    max-width: 750px; /* match section container width */
+    margin: 0 auto;
 }
 .form-embed-wrapper iframe {
     width: 100%;
     border: none;
+    /* remove height limitations */
+    min-height: 500px; /* optional initial height */
 }
-
+   
 /* ========================
    Social Icons
 ======================== */
@@ -208,22 +211,29 @@ footer {
 <!-- ========================
    Contact Section
 ========================= -->
+<!-- Contact Form Section -->
 <section class="cnenet-section cnenet-section-dark">
-    <div class="container">
-        <h1>Contact CNENet UK</h1>
-        <p>Use the form below to get in touch with us. We’ll aim to respond within a few business days.</p>
+  <div class="container">
+    <h1>Contact CNENet UK</h1>
+    <p>Use the form below to get in touch with us. We’ll aim to respond within a few business days.</p>
 
-        <!-- Tally form embed -->
-        <div class="form-embed-wrapper">
-            <iframe
-                src="https://tally.so/embed/kdYolM?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                data-tally-src="https://tally.so/embed/kdYolM?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                loading="lazy"
-            ></iframe>
-        </div>
+    <!-- Tally embed -->
+    <div class="form-embed-wrapper">
+      <iframe
+        src="https://tally.so/embed/kdYolM?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
     </div>
+  </div>
 </section>
 
+<!-- Include Tally’s dynamic resize script at the end of body -->
+<script src="https://tally.so/widgets/embed.js"></script>
+   
 <!-- ========================
    Social Icons
 ========================= -->
