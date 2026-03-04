@@ -190,11 +190,13 @@ section {
                  alt="Professor Nicola Ranger Photo" 
                  class="facilitator-photo">
    
-/* Workshops */
+/* ========================
+   Workshops - Fixed & Rounded
+======================== */
 .workshop {
-    border-radius: 10px;
-    margin-bottom: 20px;
-    overflow: hidden;
+    border-radius: 10px;           /* round corners for main card */
+    margin-bottom: 30px;           /* increased spacing between workshops */
+    overflow: auto;                /* contain floated children */
     background: #ffffff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -213,6 +215,8 @@ section {
     background: linear-gradient(90deg, #e6edf5, #dbe6f2);
     font-size: 1.1em;
     border-bottom: 1px solid #cdd9e5;
+    border-top-left-radius: 10px;   /* round top corners */
+    border-top-right-radius: 10px;
 }
 
 .workshop-title:hover {
@@ -225,6 +229,8 @@ section {
     transition: max-height 0.5s ease, padding 0.3s ease;
     padding: 0 20px;
     background-color: #f9fbfd;
+    border-bottom-left-radius: 10px;  /* round bottom corners */
+    border-bottom-right-radius: 10px;
 }
 
 .workshop-content.open {
@@ -399,6 +405,7 @@ We invite you to join us, share your experiences, and be inspired by the latest 
     <a class="button-link" href="CNENet_2026_Timetable.pdf" target="_blank">Coming soon!</a>
 </div>
    </section>
+   
 <!-- Workshops -->
 <section class="cnenet-section cnenet-section-dark">
    <div class="section-container">
