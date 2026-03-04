@@ -706,11 +706,6 @@ function toggleWorkshop(element) {
     }
 }
 
-function toggleSpeakerBio(cardElement) {
-  const bio = cardElement.querySelector('.speaker-bio');
-  bio.classList.toggle('open');
-}
-
 function toggleSpeakerBio(card) {
     const bio = card.querySelector('.speaker-bio');
     bio.classList.toggle('open');
@@ -735,18 +730,6 @@ function toggleMobileMenu() {
     }
 }
 
-   function toggleBio(imgElement) {
-    const bio = imgElement.nextElementSibling.querySelector(".workshop-content");
-    bio.classList.toggle("open");
-
-    if(bio.classList.contains("open")) {
-        bio.style.maxHeight = bio.scrollHeight + "px";
-        bio.style.padding = "15px 0";
-    } else {
-        bio.style.maxHeight = "0";
-        bio.style.padding = "0";
-    }
-}
    
 </script>
 
