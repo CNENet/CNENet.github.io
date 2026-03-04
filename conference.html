@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="description" content="CNENet 2026 Conference: Innovating Clinical Education.">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CNENet 2026 Conference: Innovating Clinical Education.">
 <title>CNENet 2026 Conference</title>
+
 <style>
-    /* Base styles (from main page) */
-    body {
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: 40px auto;
-        line-height: 1.6;
-        color: #333;
-        text-align: center;
-        padding: 0 15px;
-    }
+/* =======================
+   Base Styles
+======================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
 
-    h1, h2 {
-        color: #003366;
-    }
+h1, h2 {
+    color: #003366;
+    margin-top: 25px;
+}
 
-    a:focus {
-        outline: 2px solid #0055a5;
-        outline-offset: 2px;
-    }
+p {
+    margin: 15px 0;
+}
 
-    p {
-        margin: 15px 0;
-    }
-    
-    .button-link {
-        display: inline-block;
-        background-color: #003366;
-        color: #ffffff;
-        padding: 12px 25px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        margin: 15px 0;
-    }
+a:focus {
+    outline: 2px solid #0055a5;
+    outline-offset: 2px;
+}
 
-    .button-link:hover {
-        background-color: #0055a5;
-    }
+/* Buttons */
+.button-link {
+    display: inline-block;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: background-color 0.2s;
+}
 
-/* Navbar base styles */
+.button-link:hover {
+    background-color: #0055a5;
+}
+
+/* ========================
+   Navbar
+======================== */
 .navbar {
     background-color: #ffffff;
     padding: 6px 20px;
@@ -58,15 +64,19 @@
 .nav-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;     /* vertically centers items */
+    align-items: center;
 }
 
-/* Logo */
 .nav-logo img {
-    height: 70px;            /* prominent logo on desktop */
+    height: 70px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-/* Desktop nav links */
+.nav-logo img:hover {
+    transform: scale(1.1);
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -79,7 +89,7 @@
     color: #003366;
     text-decoration: none;
     font-weight: bold;
-    padding: 6px 12px;      /* smaller padding for slimmer nav */
+    padding: 6px 12px;
     border-radius: 5px;
     transition: background-color 0.2s;
 }
@@ -88,18 +98,12 @@
     color: #ffffff !important;
     background-color: #003366;
 }
-    
+
 .nav-links li a:hover {
     background-color: #e6edf5;
 }
 
-.nav-links li a,
-.mobile-menu li a {
-    text-decoration: none;
-    font-weight: 600;
-}
-    
-/* Hamburger menu (mobile) */
+/* Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -115,15 +119,14 @@
     display: block;
 }
 
-/* Mobile menu dropdown */
 .mobile-menu {
     display: none;
     list-style: none;
     background-color: #ffffff;
-    border-bottom: 1px solid #e0e6ed;
     flex-direction: column;
     padding: 10px 0;
     margin: 0;
+    border-bottom: 1px solid #e0e6ed;
 }
 
 .mobile-menu li a {
@@ -139,48 +142,59 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .hamburger {
-        display: flex;
-    }
-    .nav-logo img {
-        height: 50px;         
-    }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-logo img { height: 50px; }
 }
-    
-    .conference-section, .about-section, .committee-section {
-        background-color: #f0f4f8;
-        padding: 20px 25px;
-        border-radius: 8px;
-        margin: 25px auto;
-        max-width: 750px;
-        text-align: left;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
 
-    ul {
-        text-align: left;
-        display: inline-block;
-        margin: 15px 0 25px 0;
-        padding-left: 20px;
-        line-height: 1.6;
-    }
+/* ========================
+   Sections
+======================== */
+section {
+    width: 100%;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
 
-    ul li {
-        margin-bottom: 10px;
-    }
-/* Workshop Cards */
+.section-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.cnenet-section-light {
+    background: linear-gradient(120deg, #f9fbfd 0%, #e6edf5 100%);
+    padding: 60px 0;
+}
+
+.cnenet-section-dark {
+    background: linear-gradient(120deg, #f0f4f8 0%, #dbe6f2 100%);
+    padding: 60px 0;
+}
+
+.cnenet-section .container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+   
+/* Workshops */
 .workshop {
-    border-radius: 10px;
-    margin-bottom: 20px;
-    overflow: hidden;
+    display: flow-root;
+    border-radius: 10px;       /* all corners rounded */
+    overflow: hidden;          /* ensures child content doesn't break corners */
+    margin-bottom: 30px;
     background: #ffffff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
-
+   
 .workshop:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -194,6 +208,8 @@
     background: linear-gradient(90deg, #e6edf5, #dbe6f2);
     font-size: 1.1em;
     border-bottom: 1px solid #cdd9e5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .workshop-title:hover {
@@ -214,96 +230,81 @@
 
 /* Facilitator Info */
 .facilitator-info {
-    overflow: hidden;       /* contains floated elements */
+    overflow: hidden;
     margin-bottom: 15px;
     border-bottom: 1px solid #e0e6ed;
     padding-bottom: 10px;
 }
 
-/* Photo floated left */
 .facilitator-photo {
     float: left;
-    width: 150px;           /* adjust size as needed */
+    width: 150px;
     margin-right: 15px;
     margin-bottom: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Text wrapping around photo */
 .facilitator-text {
-    overflow: hidden;        /* ensures text wraps nicely */
+    overflow: hidden;
 }
 
-/* Company logos inside facilitator text */
-.facilitator-text .company-logo {
+.company-logo-container {
+    margin-top: 10px;
+}
+
+.company-logo {
     max-width: 80px;
+   max-height: 40px;
     display: inline-block;
     margin-top: 5px;
 }
 
-    .company-logo-container {
-    margin-top: 10px;
-}
-
-/* Responsive adjustments for small screens */
+/* Responsive */
 @media (max-width: 600px) {
-    .facilitator-photo {
-        float: none;
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    .facilitator-text {
-        overflow: visible;
-    }
-    .facilitator-text .company-logo {
-        margin-top: 10px;
-    }
+    .facilitator-photo { float: none; width: 100%; margin-right: 0; margin-bottom: 10px; }
+    .facilitator-text { overflow: visible; }
+    .company-logo { margin-top: 10px; }
 }
 
+/* Social icons */
 .social-icons {
     margin-top: 25px;
-    text-align: center; /* center all icons */
+    text-align: center;
 }
 
 .social-icons a {
     display: inline-block;
-    margin: 0 10px; /* spacing between icons */
+    margin: 0 10px;
 }
 
 .social-icons img {
-    width: 40px;       /* same size for all icons */
+    width: 40px;
     height: 40px;
-    border-radius: 5px; /* optional slight rounding */
-    transition: transform 0.2s; /* smooth hover effect */
+    border-radius: 5px;
+    transition: transform 0.2s;
 }
 
 .social-icons img:hover {
-    transform: scale(1.2); /* grows slightly on hover */
+    transform: scale(1.2);
 }
-
 </style>
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Navbar -->
 <nav class="navbar">
     <div class="nav-container">
-        <!-- Logo acts as Home link -->
         <a href="index.html" class="nav-logo">
             <img src="images/cnenetlogo.jpg" alt="CNENet Logo">
         </a>
-
-        <!-- Desktop navigation links -->
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
-            <li><a href="advocacy.html">Influence</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href=https://forms.office.com/pages/responsepage.aspx?id=slTDN7CF9UeyIge0jXdO45AksIrpdb5DtPM-hG_wgyZUNTQ3NkQ2NERPV0IxSk42WEw2Nk1RTjdGUi4u&origin=lprLink&route=shorturl" class="button-link">Join Us</a></li>
+   <li><a href="advocacy.html">Influence</a></li>
+    <li><a href="events.html">Events</a></li>
+   <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://forms.office.com/pages/responsepage.aspx?id=slTDN7CF9UeyIge0jXdO45AksIrpdb5DtPM-hG_wgyZUNTQ3NkQ2NERPV0IxSk42WEw2Nk1RTjdGUi4u&origin=lprLink&route=shorturl" class="button-link">Join Us</a></li>
         </ul>
-
-        <!-- Hamburger for mobile -->
         <div class="hamburger" onclick="toggleMobileMenu()">
             <span></span>
             <span></span>
@@ -312,21 +313,20 @@
     </div>
 </nav>
 
-<!-- Mobile menu dropdown -->
 <ul class="mobile-menu" id="mobileMenu">
-           <li><a href="about.html">About</a></li>
-            <li><a href="advocacy.html">Influence</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+   <li><a href="advocacy.html">Influence</a></li>
+    <li><a href="events.html">Events</a></li>
+   <li><a href="contact.html">Contact</a></li>
     <li><a href="https://forms.office.com/pages/responsepage.aspx?id=YOUR_JOIN_FORM_ID">Join Us</a></li>
 </ul>
 
-<h1>CNENet 2026 Conference</h1>
-
-<!-- Conference overview -->
-<div class="conference-section">
-<h2>Innovating Clinical Education</h2>
-    <p>
+<!-- Conference Intro -->
+   <section class="cnenet-section cnenet-section-light">
+    <div class="section-container">
+        <h1>CNENet 2026 Conference</h1>
+        <h2>Innovating Clinical Education</h2>
+        <p>
 Change is everywhere and clinical educators are always eager to be at the forefront. This year, CNENet will focus on <strong>innovations in clinical education</strong>. We want to hear about everything from how you use large language models like ChatGPT to creative approaches to art in clinical education - so please <strong>submit your abstracts</strong> to be considered for oral or poster presentation!
 </p>
 
@@ -338,163 +338,212 @@ It’s an exciting year for the CNENet conference, with a mix of new opportuniti
 We invite you to join us, share your experiences, and be inspired by the latest developments in clinical education across the UK.
 </p>
 
-    <p><strong>Dates:</strong> 10 July 2026</p>
-    <p><strong>Host:</strong> <a href="https://www.bsmhft.nhs.uk/">Birmingham and Solihull NHS Mental Health Trust</a> </p>
-    <p><strong>Venue:</strong> <a href="https://www.bsmhft.nhs.uk/about-us/conference-facilities-for-hire/uffculme-centre/">The Uffculme Centre</a> </p>
-    <p><strong>Travel:</strong> There is limited parking at the venue, so please arrive early to secure a space.  The nearest train station is Birmingham New Street with excellent bus connections to the venue via routes 50 and 35, which are accessible from Moor Street outside Selfridges </p>
-    
- <div style="border-radius:8px; overflow:hidden;">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.103493589429!2d-1.8996349882366272!3d52.44103997192399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bc1a3b9270dd%3A0x95c2e4f89ff281f5!2sUffculme%20Centre!5e0!3m2!1sen!2suk!4v1770574819908!5m2!1sen!2suk" 
-            width="100%" 
-            height="250" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe></div>
+<p><strong>Dates:</strong> 10 July 2026</p>
+<p><strong>Host:</strong> <a href="https://www.bsmhft.nhs.uk/">Birmingham and Solihull NHS Mental Health Trust</a> </p>
+<p><strong>Venue:</strong> <a href="https://www.bsmhft.nhs.uk/about-us/conference-facilities-for-hire/uffculme-centre/">The Uffculme Centre</a> </p>
+<p><strong>Travel:</strong> There is limited parking at the venue, so please arrive early to secure a space.  The nearest train station is Birmingham New Street with excellent bus connections to the venue via routes 50 and 35, which are accessible from Moor Street outside Selfridges </p>
 
-<!-- Timetable -->
-<div class="conference-section">
+<div style="border-radius:8px; overflow:hidden;">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.103493589429!2d-1.8996349882366272!3d52.44103997192399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bc1a3b9270dd%3A0x95c2e4f89ff281f5!2sUffculme%20Centre!5e0!3m2!1sen!2suk!4v1770574819908!5m2!1sen!2suk" 
+        width="100%" 
+        height="250" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+</section>
+
+<!-- Keynote Speaker Section -->
+<section class="cnenet-section cnenet-section-dark">
+    <div class="section-container">
+
+<!-- Introductory Passage -->
+        <div class="keynote-intro">
+           <h2>Keynote Speaker</h2>
+            <p>
+               We’re delighted to welcome <strong>Professor Nicola Ranger</strong> as our keynote speaker for the 2026 conference. 
+               Drawing on her extensive leadership experience in nursing across the UK and internationally she will share her insights 
+               on the factors driving <strong>innovation</strong> in clinical education and shaping its future.
+            </p>
+        </div>
+       
+<!-- Speaker Photo and Bio -->
+        <div class="facilitator-info" style="margin-top: 30px;">
+            <img src="images/keynote1.jpg" 
+                 alt="Professor Nicola Ranger Photo" 
+                 class="facilitator-photo">
+
+            <!-- Speaker Details -->
+            <div class="facilitator-text">
+                             <strong>Professor Nicola Ranger</strong><br>
+RCN General Secretary and Chief Executive
+                <p>
+                   Professor Nicola Ranger joined the Royal College of Nursing in December 2022 as the Chief Nursing Officer. In 2024 she was appointed General Secretary and Chief Executive of the RCN. She was previously Chief Nurse and Executive Director of Midwifery at King’s College Hospital NHS Foundation Trust in London. Before that, she held Chief Nurse posts at both Brighton and Sussex University Hospitals NHS Trust and Frimley Health NHS Foundation Trust.
+                </p>
+
+                <p>
+                  She has also held a number of senior nursing roles at University College London Hospitals NHS Foundation Trust and Surrey and Sussex Healthcare NHS Trust. Earlier in her career, she worked at America’s George Washington University Hospital in Washington and at Mount Sinai Medical Centre in New York.
+                </p>
+              <div style="margin-top:10px;" class="company-logo-container">
+    <a href="https://www.rcn.org.uk/" target="_blank">
+        <img src="images/RCNmini.jpg" alt="Royal College of Nursing Logo" class="company-logo">
+    </a>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Timetable -->
+   <section class="cnenet-section cnenet-section-light">
+<div class="section-container">
     <h2>Timetable</h2>
     <p>The full conference timetable will be available as a PDF:</p>
     <a class="button-link" href="CNENet_2026_Timetable.pdf" target="_blank">Coming soon!</a>
 </div>
-
+   </section>
+   
 <!-- Workshops -->
-<div class="conference-section">
-    <h2>Optional Workshops</h2>
+<section class="cnenet-section cnenet-section-dark">
+    <div class="section-container">
+        <h2>Optional Workshops</h2>
 
-    <!-- Workshop 1 -->
-    <div class="workshop">
-        <div class="workshop-title" onclick="toggleWorkshop(this)">
-            Workshop 1: Letting Go to Innovate: The Power of Curiosity in Education
-        </div>
-        <div class="workshop-content">
-            <div class="facilitator-info">
-                <img src="images/facilitator1.jpg" alt="Olivia Corrie Photo" class="facilitator-photo">
-                <div class="facilitator-text">
-                    <strong>Facilitator:</strong> Olivia Corrie, CEO & Founder of Frontline Communication Training Ltd
-                    <br>
-                    <p>With over 25 years’ experience in healthcare education, Olivia has designing and delivering communication training from introductory foundations to advanced level programmes, tailored to diverse clinical contexts.</p>
-                    <p>Her work focuses on creating powerful thinking environments, She is especially interested in how curiosity transforms education into a space of genuine play</p>
-                      <div class="company-logo-container">
-        <a href="https://frontline-communication.com/" target="_blank">
-            <img src="images/FrontlineLogo1.png" alt="Frontline Communication Logo" class="company-logo">
-        </a>
-    </div>
-                </div>
+        <!-- Workshop 1 -->
+        <div class="workshop">
+            <div class="workshop-title" onclick="toggleWorkshop(this)">
+                Workshop 1: Letting Go to Innovate: The Power of Curiosity in Education
             </div>
-
-            <p><strong>Workshop Outline:</strong> Innovation in education does not always come from new content or technology—it often comes from the conditions we create.</p>
-            <p>This interactive workshop explores the art of play in healthcare education: what happens when we loosen our attachment to outcomes, trust the learning process, and create environments where curiosity, connection, and purpose are prioritised.</p>
-            <p>Through live reflection and practical micro-experiments, we will explore the tension between agenda and purpose, ask who is really doing the thinking in our teaching, and examine how the components of a Thinking Environment support us to create spaces where play, presence, and new thinking can emerge.</p>
-            <p>Participants will leave re-energised in their purpose as educators and the conditions that make innovative learning possible.</p>
-        </div>
-    </div>
-
-    <!-- Workshop 2 -->
-    <div class="workshop">
-        <div class="workshop-title" onclick="toggleWorkshop(this)">
-            Workshop 2: Designing Complex Simulation: Lessons from Domestic Abuse Practice
-        </div>
-        <div class="workshop-content">
-            <div class="facilitator-info">
-                <img src="images/facilitator2.jpg" alt="Margaret Struthers Photo" class="facilitator-photo">
-                <div class="facilitator-text">
-                    <strong>Facilitator:</strong> Margaret Struthers
-                    <br>
-                    Margaret Struthers is a registered social worker and senior lecturer in social work at Manchester Metropolitan University. 
-                    She is lead practitioner for simulation-based education within the social work department. Margaret has worked in 
-                    children and family social work, adult and youth criminal justice, and specialist domestic violence and abuse services. 
-                    She has practised, taught, and researched in the field of domestic violence and abuse for the last 15 years.
-              <div class="company-logo-container">
-                    <a href="https://www.mmu.ac.uk/staff/profile/margaret-struthers" target="_blank">
-                        <img src="images/MancsLogo1.png" alt="Manchester Metropolitan University Logo" class="company-logo">
-                    </a>
-              </div>
+            <div class="workshop-content">
+                <div class="facilitator-info">
+                    <img src="images/facilitator1.jpg" alt="Olivia Corrie Photo" class="facilitator-photo">
+                    <div class="facilitator-text">
+                        <strong>Facilitator:</strong> Olivia Corrie, CEO & Founder of Frontline Communication Training Ltd
+                        <br>
+                        <p>With over 25 years’ experience in healthcare education, Olivia has designing and delivering communication training from introductory foundations to advanced level programmes, tailored to diverse clinical contexts.</p>
+                        <p>Her work focuses on creating powerful thinking environments, She is especially interested in how curiosity transforms education into a space of genuine play</p>
+                        <div class="company-logo-container">
+                            <a href="https://frontline-communication.com/" target="_blank">
+                                <img src="images/FrontlineLogo1.png" alt="Frontline Communication Logo" class="company-logo">
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
+                <p><strong>Workshop Outline:</strong> Innovation in education does not always come from new content or technology—it often comes from the conditions we create.</p>
+                <p>This interactive workshop explores the art of play in healthcare education: what happens when we loosen our attachment to outcomes, trust the learning process, and create environments where curiosity, connection, and purpose are prioritised.</p>
+                <p>Through live reflection and practical micro-experiments, we will explore the tension between agenda and purpose, ask who is really doing the thinking in our teaching, and examine how the components of a Thinking Environment support us to create spaces where play, presence, and new thinking can emerge.</p>
+                <p>Participants will leave re-energised in their purpose as educators and the conditions that make innovative learning possible.</p>
             </div>
-
-            <p><strong>Workshop Outline:</strong></p>
-            <p>
-                Margaret has developed a bespoke domestic abuse and coercive control simulation for social work students. 
-                The simulation is grounded in frontline practice experience and shaped by feedback from victims and survivors 
-                about their interactions with professionals. Although created for social work education, the issues addressed 
-                are cross-cutting and relevant to all professionals across health and social care.
-            </p>
-
-            <p>
-                In this workshop you will explore the simulation design and its underpinning principles. These will be brought 
-                to life through the opportunity to experience and practise selected elements yourself. The session will conclude 
-                with structured reflection to enable you to apply learning to your own role and professional context.
-            </p>
-
-            <p>
-                Through the simulation you will explore deficit-based and strengths-based approaches to communication. 
-                You will observe in real time how each shapes outcomes within an authentic practice scenario. By connecting 
-                the thinking behind the design with your lived experience of participating, Margaret will demonstrate how 
-                the simulation strengthens participants’ ability to:
-            </p>
-
-            <ul>
-                <li>Recognise signs of domestic abuse and coercive control</li>
-                <li>Communicate thoughtfully and effectively with victim–survivors</li>
-                <li>Respond appropriately and safely to perpetrators</li>
-                <li>Reflect on the impact of their professional approach</li>
-            </ul>
-
-            <p>
-                The workshop will combine clarity about simulation design with practical experience, ensuring that learning 
-                is both immediately relevant and transferable to practice.
-            </p>
         </div>
-    </div>
 
-    <!-- Workshop 3 -->
-    <div class="workshop">
-        <div class="workshop-title" onclick="toggleWorkshop(this)">
-            Workshop 3: Effective Leadership Development and How to Commission It
-        </div>
-        <div class="workshop-content">
-            <div class="facilitator-info">
-                <img src="images/facilitator3.jpeg" alt="Dr. Oscar Lyons Photo" class="facilitator-photo">
-                <div class="facilitator-text">
-                    <strong>Facilitator:</strong> Dr. Oscar Lyons
-                    <br>
-                    Oscar is the theme lead for Leadership Development at BMJ Leader, a Senior Associate Tutor and Leadership Module Lead for Oxford University. In 2025 he and his team published research synthesising data from 86 reviews and more than 1600 primary studies. His sessions are interactive, entertaining, and rigorous.
-              <div class="company-logo-container">
-                    <a href="https://www.thrumleadership.com/" target="_blank">
-                        <img src="images/ThrumLogo2.avif" alt="Thrum Leadership Logo" class="company-logo">
-                    </a>
-              </div>
+        <!-- Workshop 2 -->
+        <div class="workshop">
+            <div class="workshop-title" onclick="toggleWorkshop(this)">
+                Workshop 2: Designing Complex Simulation: Lessons from Domestic Abuse Practice
+            </div>
+            <div class="workshop-content">
+                <div class="facilitator-info">
+                    <img src="images/facilitator2.jpg" alt="Margaret Struthers Photo" class="facilitator-photo">
+                    <div class="facilitator-text">
+                        <strong>Facilitator:</strong> Margaret Struthers
+                        <br>
+                        Margaret Struthers is a registered social worker and senior lecturer in social work at Manchester Metropolitan University. 
+                        She is lead practitioner for simulation-based education within the social work department. Margaret has worked in 
+                        children and family social work, adult and youth criminal justice, and specialist domestic violence and abuse services. 
+                        She has practised, taught, and researched in the field of domestic violence and abuse for the last 15 years.
+                        <div class="company-logo-container">
+                            <a href="https://www.mmu.ac.uk/staff/profile/margaret-struthers" target="_blank">
+                                <img src="images/MancsLogo1.png" alt="Manchester Metropolitan University Logo" class="company-logo">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <p><strong>Workshop Outline:</strong></p>
-            <p>
-                This highly practical workshop will give you two advantages. First, you will experience leadership development in action — not just as theory, but as lived practice. Second, you will gain the insight and confidence to commission leadership development that genuinely works.
-            </p>
-            <p>
-                This session will help you make sharper, more confident decisions whether you are responsible for commissioning programmes, designing them, delivering them, or participating in them.
-            </p>
-            <p>
-                Grounded in definitive published research, the workshop will translate best practice into clear, usable guidance. At the end of the workshop you will be able to:
-            </p>
-            <ul>
-                <li>Clarify what effective leadership development looks like</li>
-                <li>Articulate what you and your organisation need leadership development to deliver</li>
-                <li>Distinguish high-impact approaches from costly distractions</li>
-            </ul>
-            <p>
-                You will leave with practical tools and clearer judgement — able to assess leadership development opportunities with confidence whether you are buying, building or participating.
-            </p>
+                <p><strong>Workshop Outline:</strong></p>
+                <p>
+                    Margaret has developed a bespoke domestic abuse and coercive control simulation for social work students. 
+                    The simulation is grounded in frontline practice experience and shaped by feedback from victims and survivors 
+                    about their interactions with professionals. Although created for social work education, the issues addressed 
+                    are cross-cutting and relevant to all professionals across health and social care.
+                </p>
+
+                <p>
+                    In this workshop you will explore the simulation design and its underpinning principles. These will be brought 
+                    to life through the opportunity to experience and practise selected elements yourself. The session will conclude 
+                    with structured reflection to enable you to apply learning to your own role and professional context.
+                </p>
+
+                <p>
+                    Through the simulation you will explore deficit-based and strengths-based approaches to communication. 
+                    You will observe in real time how each shapes outcomes within an authentic practice scenario. By connecting 
+                    the thinking behind the design with your lived experience of participating, Margaret will demonstrate how 
+                    the simulation strengthens participants’ ability to:
+                </p>
+
+                <ul>
+                    <li>Recognise signs of domestic abuse and coercive control</li>
+                    <li>Communicate thoughtfully and effectively with victim–survivors</li>
+                    <li>Respond appropriately and safely to perpetrators</li>
+                    <li>Reflect on the impact of their professional approach</li>
+                </ul>
+
+                <p>
+                    The workshop will combine clarity about simulation design with practical experience, ensuring that learning 
+                    is both immediately relevant and transferable to practice.
+                </p>
+            </div>
+        </div>
+
+        <!-- Workshop 3 -->
+        <div class="workshop">
+            <div class="workshop-title" onclick="toggleWorkshop(this)">
+                Workshop 3: Effective Leadership Development and How to Commission It
+            </div>
+            <div class="workshop-content">
+                <div class="facilitator-info">
+                    <img src="images/facilitator3.jpeg" alt="Dr. Oscar Lyons Photo" class="facilitator-photo">
+                    <div class="facilitator-text">
+                        <strong>Facilitator:</strong> Dr. Oscar Lyons
+                        <br>
+                        Oscar is the theme lead for Leadership Development at BMJ Leader, a Senior Associate Tutor and Leadership Module Lead for Oxford University. In 2025 he and his team published research synthesising data from 86 reviews and more than 1600 primary studies. His sessions are interactive, entertaining, and rigorous.
+                        <div class="company-logo-container">
+                            <a href="https://www.thrumleadership.com/" target="_blank">
+                                <img src="images/ThrumLogo2.avif" alt="Thrum Leadership Logo" class="company-logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <p><strong>Workshop Outline:</strong></p>
+                <p>
+                    This highly practical workshop will give you two advantages. First, you will experience leadership development in action — not just as theory, but as lived practice. Second, you will gain the insight and confidence to commission leadership development that genuinely works.
+                </p>
+                <p>
+                    This session will help you make sharper, more confident decisions whether you are responsible for commissioning programmes, designing them, delivering them, or participating in them.
+                </p>
+                <p>
+                    Grounded in definitive published research, the workshop will translate best practice into clear, usable guidance. At the end of the workshop you will be able to:
+                </p>
+                <ul>
+                    <li>Clarify what effective leadership development looks like</li>
+                    <li>Articulate what you and your organisation need leadership development to deliver</li>
+                    <li>Distinguish high-impact approaches from costly distractions</li>
+                </ul>
+                <p>
+                    You will leave with practical tools and clearer judgement — able to assess leadership development opportunities with confidence whether you are buying, building or participating.
+                </p>
+            </div>
         </div>
     </div>
-</div>
-
+</section>
+   
 <!-- Randomised Coffee Trial 2026 -->
-<div class="conference-section">
+
+     <section class="cnenet-section cnenet-section-light">
+<div class="section-container">
     <h2>Randomised Coffee Trial 2026</h2>
     <p>
         The Randomised Coffee Trial (RCT) is a fun and informal networking opportunity for clinical nurse educators. 
@@ -509,9 +558,11 @@ We invite you to join us, share your experiences, and be inspired by the latest 
         Participation is completely optional. When you sign up you’ll be offered the opportunity to take part in the Randomised Coffee Trial.
     </p>
 </div>
-    
+     </section>
+   
     <!-- Abstract Submission -->
-<div class="conference-section">
+     <section class="cnenet-section cnenet-section-dark">
+<div class="section-container">
     <h2>Abstract Submission</h2>
     <p>
         Delegates are invited to submit their work for the CNENet 2026 Conference until <strong>30 April 2026</strong>. You may submit an abstract for an <strong>oral presentation</strong>, a <strong>poster presentation</strong>, or both.
@@ -528,9 +579,11 @@ We invite you to join us, share your experiences, and be inspired by the latest 
         </a>
     </p>
 </div>
-
+     </section>
+   
     <!-- Final Call-to-Action -->
-<div class="conference-section">
+     <section class="cnenet-section cnenet-section-light">
+<div class="section-container">
     <h2>Join Us at CNENet 2026!</h2>
     <p>
         CNENet 2026 promises to be an inspiring and engaging conference for clinical nurse educators across the UK. 
@@ -548,9 +601,10 @@ We invite you to join us, share your experiences, and be inspired by the latest 
         </a>
     </p>
 </div>
-
+     </section>
+   
     <!-- Exhibitors Section -->
-<div class="conference-section">
+<div class="section-container">
     <h2>Exhibitors</h2>
     <p>
         We would like to extend our sincere thanks to all our exhibitors for supporting CNENet 2026. 
@@ -583,7 +637,7 @@ We invite you to join us, share your experiences, and be inspired by the latest 
    
 </div>
     
-<script>
+<script>   
 function toggleWorkshop(element) {
     const content = element.nextElementSibling;
     content.classList.toggle("open");
@@ -603,6 +657,20 @@ function toggleMobileMenu() {
         menu.style.flexDirection = "column";
     }
 }
+
+   function toggleBio(imgElement) {
+    const bio = imgElement.nextElementSibling.querySelector(".workshop-content");
+    bio.classList.toggle("open");
+
+    if(bio.classList.contains("open")) {
+        bio.style.maxHeight = bio.scrollHeight + "px";
+        bio.style.padding = "15px 0";
+    } else {
+        bio.style.maxHeight = "0";
+        bio.style.padding = "0";
+    }
+}
+   
 </script>
 
 
@@ -612,3 +680,5 @@ function toggleMobileMenu() {
     </p>
 </footer>
 
+</body>
+</html>
