@@ -1,0 +1,146 @@
+<!-- =========================
+     CNENet Multi-Issue Newsletter Archive Template (Accordion)
+========================= -->
+<style>
+/* Base card for each newsletter issue */
+.newsletter-card {
+    background-color: #f0f4f8; /* CNENet light background for banner */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px; /* spacing between cards */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* subtle separation */
+    font-family: Arial, sans-serif;
+}
+
+/* Header / title of the newsletter */
+.newsletter-header {
+    background: linear-gradient(90deg, #dbe6f2, #e6edf5);
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #003366;
+    border-bottom: 1px solid #cdd9e5;
+    transition: background 0.2s;
+}
+
+.newsletter-header:hover {
+    background: linear-gradient(90deg, #c4d4e3, #d0dce9);
+}
+
+/* Collapsible content area */
+.newsletter-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    padding: 0 20px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* When open, add padding and allow full height */
+.newsletter-content.open {
+    padding: 15px 20px 25px 20px;
+}
+
+/* Optional horizontal divider for visual separation */
+.newsletter-divider {
+    height: 1px;
+    background-color: #cdd9e5;
+    margin: 15px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .newsletter-header {
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+    .newsletter-content.open {
+        padding: 12px 15px 20px 15px;
+    }
+}
+</style>
+
+<div class="newsletter-archive">
+
+    <!-- ====================
+         Newsletter Issue 1
+    ==================== -->
+    <div class="newsletter-card">
+        <div class="newsletter-header" onclick="toggleNewsletter(this)">
+            March 2026 Newsletter
+        </div>
+        <div class="newsletter-content">
+            <!-- ======= BEGIN KIT HTML CONTENT ======= -->
+            <h2>Welcome to the March 2026 CNENet Newsletter</h2>
+            <p>This month we highlight innovative approaches to clinical education, upcoming workshops, and member news.</p>
+            <blockquote>“Innovation is the key to shaping future clinical educators.”</blockquote>
+            <p><a href="#">Read more articles</a></p>
+            <!-- ======= END KIT HTML CONTENT ======= -->
+        </div>
+    </div>
+
+    <div class="newsletter-divider"></div>
+
+    <!-- ====================
+         Newsletter Issue 2
+    ==================== -->
+    <div class="newsletter-card">
+        <div class="newsletter-header" onclick="toggleNewsletter(this)">
+            February 2026 Newsletter
+        </div>
+        <div class="newsletter-content">
+            <!-- ======= BEGIN KIT HTML CONTENT ======= -->
+            <h2>February Highlights</h2>
+            <p>In this issue, we explore the latest clinical education research and showcase member achievements.</p>
+            <p><a href="#">View the full newsletter</a></p>
+            <!-- ======= END KIT HTML CONTENT ======= -->
+        </div>
+    </div>
+
+    <div class="newsletter-divider"></div>
+
+    <!-- ====================
+         Newsletter Issue 3
+    ==================== -->
+    <div class="newsletter-card">
+        <div class="newsletter-header" onclick="toggleNewsletter(this)">
+            January 2026 Newsletter
+        </div>
+        <div class="newsletter-content">
+            <!-- ======= BEGIN KIT HTML CONTENT ======= -->
+            <h2>January Roundup</h2>
+            <p>This issue covers upcoming events, recent publications, and highlights from our community.</p>
+            <p><a href="#">Read more</a></p>
+            <!-- ======= END KIT HTML CONTENT ======= -->
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Accordion behavior: only one newsletter expanded at a time
+function toggleNewsletter(headerElement) {
+    const content = headerElement.nextElementSibling;
+    const allContents = document.querySelectorAll('.newsletter-content');
+
+    // Collapse all other contents
+    allContents.forEach(c => {
+        if(c !== content) {
+            c.classList.remove('open');
+            c.style.maxHeight = "0px";
+        }
+    });
+
+    // Toggle this content
+    content.classList.toggle('open');
+    if (content.classList.contains('open')) {
+        content.style.maxHeight = "0px"; // reset to recalc
+        const scrollHeight = content.scrollHeight;
+        content.style.maxHeight = scrollHeight + "px"; // expand fully
+    } else {
+        content.style.maxHeight = "0px"; // collapse
+    }
+}
+</script>
