@@ -7,7 +7,7 @@
 <title>CNENet 2026 Conference</title>
 
 <style>
-/* ======================
+/* =====================
    Base Styles
 ======================== */
 body {
@@ -184,6 +184,149 @@ section {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+}
+
+   
+.conference-hero {
+    background: linear-gradient(120deg, #f9fbfd 0%, #e6edf5 100%);
+    padding: 70px 20px;
+}
+
+.hero-inner {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.hero-text h1 {
+    font-size: 2.3rem;
+    margin-bottom: 5px;
+}
+
+.hero-text h2 {
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.hero-details {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.conference-host img {
+    max-height: 60px;
+    max-width: 220px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+   .conference-host {
+    text-align: center;
+    margin: 25px 0 30px;
+}
+
+.conference-host a {
+    display: inline-block;
+    padding: 8px 8px;
+    background: #ffffff;
+    border: 1px solid #dbe6f2;
+    border-radius: 6px;
+}
+   
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.event-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.event-card strong {
+    display: block;
+    color: #003366;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.event-card span {
+    font-size: 0.95rem;
+}
+
+.hero-map iframe {
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+
+.hero-details {
+grid-template-columns: 1fr;
+}
+
+.event-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+}
+
+.host-card {
+    background:#ffffff;
+    border:1px solid #dbe6f2;
+    border-radius:8px;
+    padding:18px;
+    text-align:center;
+    margin:25px auto;
+    max-width:420px;
+}
+
+.host-card strong {
+    display:block;
+    color:#003366;
+    margin-bottom:6px;
+}
+
+.host-card img {
+    max-height:55px;
+    margin-top:8px;
+}
+
+.full-width-card {
+    grid-column: 1 / -1;  /* spans entire hero-details grid */
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.full-width-card strong {
+    display: block;
+    color: #003366;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+   
 /* Speaker Card */
 .speaker-card {
   border-radius: 10px;
@@ -203,7 +346,7 @@ section {
 .speaker-summary {
   display: flex;
   align-items: center;
-  padding: 15px 20px
+  padding: 15px 20px;
    cursor: pointer;
 }
 
@@ -384,11 +527,27 @@ section {
 </ul>
 
 <!-- Conference Intro -->
-   <section class="cnenet-section cnenet-section-light">
-    <div class="section-container">
-        <h1>CNENet 2026 Conference</h1>
-        <h2>Innovating Clinical Education</h2>
-        <p>
+
+   <section class="conference-hero">
+
+<div class="hero-inner">
+
+<div class="hero-text">
+
+<h1>CNENet 2026 Conference</h1>
+<h2>Innovating Clinical Education</h2>
+
+<div class="conference-host">
+
+<span class="host-label">Hosted by</span><br>
+
+<a href="https://www.bsmhft.nhs.uk/" target="_blank">
+<img src="images/BSMHFT2.jpg" alt="Birmingham and Solihull NHS Mental Health Trust Logo">
+</a>
+
+</div>
+   
+ <p>
 Change is everywhere and clinical educators are always eager to be at the forefront. This year, CNENet will focus on <strong>innovations in clinical education</strong>. We want to hear about everything from how you use large language models like ChatGPT to creative approaches to art in clinical education - so please <strong>submit your abstracts</strong> to be considered for oral or poster presentation!
 </p>
 
@@ -400,24 +559,60 @@ It’s an exciting year for the CNENet conference, with a mix of new opportuniti
 We invite you to join us, share your experiences, and be inspired by the latest developments in clinical education across the UK.
 </p>
 
-<p><strong>Date:</strong> 10 July 2026</p>
-<p><strong>Registration:</strong> 08:30-09:15</p>
-<p><strong>Start/Finish:</strong> 09:30-16:00 with a closing display in the gardens until 16:30</p>
-<p><strong>Host:</strong> <a href="https://www.bsmhft.nhs.uk/">Birmingham and Solihull NHS Mental Health Trust</a> </p>
-<p><strong>Venue:</strong> <a href="https://www.bsmhft.nhs.uk/about-us/conference-facilities-for-hire/uffculme-centre/">The Uffculme Centre</a> </p>
-<p><strong>Travel:</strong> There is limited parking at the venue, so please arrive early to secure a space.  The nearest train station is Birmingham New Street with excellent bus connections to the venue via routes 50 and 35, which are accessible from Moor Street outside Selfridges </p>
-
-<div style="border-radius:8px; overflow:hidden;">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.103493589429!2d-1.8996349882366272!3d52.44103997192399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bc1a3b9270dd%3A0x95c2e4f89ff281f5!2sUffculme%20Centre!5e0!3m2!1sen!2suk!4v1770574819908!5m2!1sen!2suk" 
-        width="100%" 
-        height="250" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
 </div>
+
+
+<div class="hero-details">
+
+<div class="event-grid">
+
+<div class="event-card card">
+<strong>Date</strong>
+<span>10 July 2026</span>
+</div>
+
+<div class="event-card card">
+<strong>Registration</strong>
+<span>08:30 – 09:15</span>
+</div>
+
+<div class="event-card card">
+<strong>Conference</strong>
+<span>09:30 – 16:00</span>
+</div>
+
+<div class="event-card card">
+<strong>Venue</strong>
+<span>The Uffculme Centre</span>
+</div>
+
+<div class="hero-travel-card full-width-card card">
+  <strong>Travel Information</strong>
+  <p>
+    There is limited parking at the venue, so please arrive early to secure a space. 
+    The nearest train station is Birmingham New Street with excellent bus connections 
+    to the venue via routes 50 and 35, which are accessible from Moor Street outside Selfridges.
+  </p>
+</div>
+
+</div>
+
+<div class="hero-map">
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.103493589429!2d-1.8996349882366272!3d52.44103997192399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bc1a3b9270dd%3A0x95c2e4f89ff281f5!2sUffculme%20Centre!5e0!3m2!1sen!2suk!4v1770574819908!5m2!1sen!2suk"
+width="100%"
+height="220"
+style="border:0;"
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- Keynote Speaker Section -->
@@ -435,7 +630,7 @@ We invite you to join us, share your experiences, and be inspired by the latest 
     </div>
 
     <!-- Speaker Card (clickable) -->
-    <div class="speaker-card" onclick="toggleSpeakerBio(this)">
+    <div class="speaker-card card" onclick="toggleSpeakerBio(this)">
       <div class="speaker-summary">
         <img src="images/keynote1.jpg" alt="Professor Nicola Ranger Photo" class="facilitator-photo">
         <div class="facilitator-text">
@@ -479,7 +674,7 @@ We invite you to join us, share your experiences, and be inspired by the latest 
         <h2>Optional Workshops</h2>
 
         <!-- Workshop 1 -->
-        <div class="workshop">
+        <div class="workshop card">
             <div class="workshop-title" onclick="toggleWorkshop(this)">
                 Workshop 1: Letting Go to Innovate: The Power of Curiosity in Education
             </div>
@@ -507,7 +702,7 @@ We invite you to join us, share your experiences, and be inspired by the latest 
         </div>
 
         <!-- Workshop 2 -->
-        <div class="workshop">
+        <div class="workshop card">
             <div class="workshop-title" onclick="toggleWorkshop(this)">
                 Workshop 2: Designing Complex Simulation: Lessons from Domestic Abuse Practice
             </div>
@@ -565,7 +760,7 @@ We invite you to join us, share your experiences, and be inspired by the latest 
         </div>
 
         <!-- Workshop 3 -->
-        <div class="workshop">
+        <div class="workshop card">
             <div class="workshop-title" onclick="toggleWorkshop(this)">
                 Workshop 3: Effective Leadership Development and How to Commission It
             </div>
