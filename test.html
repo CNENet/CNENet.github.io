@@ -299,6 +299,12 @@ grid-template-columns: 1fr 1fr;
     max-height:55px;
     margin-top:8px;
 }
+
+.full-width-card {
+    grid-column: 1 / -1;  /* spans entire hero-details grid */
+    margin-top: 20px;
+    padding: 20px;
+}
    
 /* Speaker Card */
 .speaker-card {
@@ -594,9 +600,13 @@ We invite you to join us, share your experiences, and be inspired by the latest 
 <span>The Uffculme Centre</span>
 </div>
 
-<div class="event-card">
-<strong>Travel</strong>
-<span>There is limited parking at the venue, so please arrive early to secure a space.  The nearest train station is Birmingham New Street with excellent bus connections to the venue via routes 50 and 35, which are accessible from Moor Street outside Selfridges</span>
+<div class="hero-travel-card card full-width-card">
+  <strong>Travel Information</strong>
+  <p>
+    There is limited parking at the venue, so please arrive early to secure a space. 
+    The nearest train station is Birmingham New Street with excellent bus connections 
+    to the venue via routes 50 and 35, which are accessible from Moor Street outside Selfridges.
+  </p>
 </div>
 
 </div>
