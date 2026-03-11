@@ -184,6 +184,19 @@ section {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+}
+
+   
 .conference-hero {
     background: linear-gradient(120deg, #f9fbfd 0%, #e6edf5 100%);
     padding: 70px 20px;
@@ -644,7 +657,7 @@ loading="lazy">
     </div>
 
     <!-- Speaker Card (clickable) -->
-    <div class="speaker-card" onclick="toggleSpeakerBio(this)">
+    <div class="speaker-card card" onclick="toggleSpeakerBio(this)">
       <div class="speaker-summary">
         <img src="images/keynote1.jpg" alt="Professor Nicola Ranger Photo" class="facilitator-photo">
         <div class="facilitator-text">
